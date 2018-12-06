@@ -162,6 +162,12 @@ Connection: keep-alive
 Hello world
 We hope this tutorial helped you get up and running a simple Node.js application on Docker.
 
+#!/bin/bash
+# Delete all containers
+docker rm $(docker ps -a -q)
+# Delete all images
+docker rmi $(docker images -q)
+
 Link src:
 
 https://nodejs.org/en/docs/guides/nodejs-docker-webapp/#building-your-image
