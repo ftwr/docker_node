@@ -163,6 +163,8 @@ Hello world
 We hope this tutorial helped you get up and running a simple Node.js application on Docker.
 
 #!/bin/bash
+#first, stop all containers
+docker stop $(docker ps -aq)
 # Delete all containers
 docker rm $(docker ps -a -q)
 # Delete all images
