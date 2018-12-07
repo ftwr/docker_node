@@ -162,8 +162,10 @@ Connection: keep-alive
 Hello world
 We hope this tutorial helped you get up and running a simple Node.js application on Docker.
 
-#!/bin/bash
-#first, stop all containers
+hints:
+# rebuild containers:
+docker-compose up --build
+# stop all containers:
 docker stop $(docker ps -aq)
 # Delete all containers
 docker rm $(docker ps -a -q)
