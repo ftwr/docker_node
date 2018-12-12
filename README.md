@@ -171,7 +171,8 @@ docker stop $(docker ps -aq)
 docker rm $(docker ps -a -q)
 # Delete all images
 docker rmi $(docker images -q)
-
+one_shot:
+docker stop $(docker ps -aq); docker rm $(docker ps -a -q); docker rmi $(docker images -q)
 Link src:
 
 https://nodejs.org/en/docs/guides/nodejs-docker-webapp/#building-your-image
